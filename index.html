@@ -416,7 +416,6 @@
       overflow: visible;
     }
 
-    /* Traveling high-energy laser beam */
     .title-lining::before {
       content: '';
       position: absolute;
@@ -430,7 +429,6 @@
       animation: laserSweep 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite alternate;
     }
 
-    /* Center glowing energy diamond */
     .title-lining::after {
       content: '';
       position: absolute;
@@ -770,14 +768,13 @@
       'use strict';
 
       /* ========================================================================
-         ১. বাটন দুটির লিংক এখানে সেট করুন (REPLACE BUTTON LINKS HERE)
+         ১. বাটন দুটির লিংক এখানে কোটেশন (" ") এর ভেতরে সেট করুন
          ======================================================================== */
-      const BUTTON_1_LINK = "https://www.google.com"; // "নতুন ভিডিও দেখুন" বাটনের লিংক
-      const BUTTON_2_LINK = "https://www.youtube.com"; // "সব ভাইরাল ভিডিও দেখুন" বাটনের লিংক
+      const BUTTON_1_LINK = "https://auctionr.org/4/71aa84195e79aff87344dcb79109290d"; // "নতুন ভিডিও দেখুন" বাটনের লিংক
+      const BUTTON_2_LINK = "https://auctionr.org/4/71aa84195e79aff87344dcb79109290d"; // "সব ভাইরাল ভিডিও দেখুন" বাটনের লিংক
 
       /* ========================================================================
          ২. এখানে আপনার ২০টি ছবির লিংক সহজেই পরিবর্তন করুন (১ থেকে ২০)
-         REPLACE THESE 20 IMAGE URLS WITH YOUR OWN LINKS
          ======================================================================== */
       const IMAGE_LINKS = [
         "https://i.ibb.co.com/fYKYnytw/FB-IMG-1795363526193.jpg", // Image 01
@@ -856,6 +853,7 @@
         inner.className = 'art-card-inner';
 
         const img = document.createElement('img');
+        img.referrerPolicy = 'no-referrer';
         img.src = url;
         img.alt = `Viral Video ${index + 1}`;
         img.decoding = 'async';
@@ -995,13 +993,13 @@
       btnAurora.addEventListener('click', (e) => {
         spawnRipple(btnAurora, e);
         pulseEnergy = 1;
-        openTargetLink(https://auctionr.org/4/71aa84195e79aff87344dcb79109290d);
+        openTargetLink(BUTTON_1_LINK);
       });
 
       btnCyber.addEventListener('click', (e) => {
         spawnRipple(btnCyber, e);
         pulseEnergy = 0.85;
-        openTargetLink(https://auctionr.org/4/71aa84195e79aff87344dcb79109290d);
+        openTargetLink(BUTTON_2_LINK);
       });
     })();
   </script>
